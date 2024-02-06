@@ -1,0 +1,70 @@
+.main {
+  width: 500px;
+  height: 500px;
+  background-color: rgb(41, 41, 57);
+  margin-left: 200px;
+  overflow: hidden;
+}
+
+.wave-1 {
+  height: 300px;
+  width: 550px;
+  background-color: rgb(56, 56, 83);
+  position: relative;
+  animation: moveLeftRight 2s linear infinite;
+  top: 200px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  transform: skewY(-10deg);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.431);
+}
+
+.wave-2 {
+  height: 200px;
+  width: 550px;
+  background-color: rgb(71, 71, 116);
+  position: relative;
+  animation: moveRightLeft 2s linear infinite;
+  top: 50px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  transform: skewY(10deg);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.431);
+}
+
+.wave-3 {
+  height: 200px;
+  width: 550px;
+  background-color: rgb(97, 97, 174);
+  position: relative;
+  animation: moveLeftRight 2s linear infinite;
+  top: -100px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  transform: skewY(-10deg);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.431);
+}
+
+@keyframes moveLeftRight {
+  0% {
+    left: -50px;
+  }
+  50% {
+    left: 0px;
+  }
+  100% {
+    left: -50px;
+  }
+}
+
+@keyframes moveRightLeft {
+  0% {
+    left: 0px;
+  }
+  50% {
+    left: -50px;
+  }
+  100% {
+    left: 0px;
+  }
+}

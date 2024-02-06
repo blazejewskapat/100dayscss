@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Day60 - hover</title>
+  </head>
+  <body>
+    <div class="background">
+      <h1>HOVER</h1>
+      <div class="cover"></div>
+    </div>
+
+    <script>
+      const cover = document.querySelector(".cover");
+      const background = document.querySelector(".background");
+      const text = document.querySelector("h1");
+      background.addEventListener("mousemove", (event) => {
+        const mouseLocation = event.clientY - cover.getBoundingClientRect().top;
+        cover.style.height = `${mouseLocation}px`;
+      });
+
+      background.addEventListener("mouseleave", (event) => {
+        cover.style.height = "50%";
+      });
+    </script>
+  </body>
+</html>
